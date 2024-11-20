@@ -21,10 +21,23 @@ public class Hotel {
         this.morgenmadsTillæg = morgenmadsTillæg;
     }
 
+    @Override
+    public String toString() {
+        return "Hotel{" +
+                "navn='" + navn + '\'' +
+                ", adresse='" + adresse + '\'' +
+                ", pris=" + pris +
+                ", morgenmadsTillæg=" + morgenmadsTillæg +
+                ", wifiTillæg=" + wifiTillæg +
+                ", badTillæg=" + badTillæg +
+                '}';
+    }
+
     public void addTilmelding(Tilmelding tilmelding) {
         if (!tilmeldinger.contains(tilmelding)){
             tilmeldinger.add(tilmelding);
             tilmelding.setHotel(this);
         }
+
     }
 }

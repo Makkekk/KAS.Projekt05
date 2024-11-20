@@ -55,4 +55,14 @@ public class Deltager extends Person {
     public void setLedsager(Ledsager ledsager) {
         this.ledsager = ledsager;
     }
+
+    @Override
+    public String toString() {
+        return "Deltager{" +
+                "adresse='" + adresse + '\'' +
+                ", telefonNummer='" + telefonNummer + '\'' +
+                ", ledsager=" + ledsager +
+                ", firma=" + firma +
+                '}';
+    }
 }

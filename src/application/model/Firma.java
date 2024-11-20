@@ -7,7 +7,7 @@ public class Firma {
     private String telefonNummer;
     private ArrayList<Deltager> deltagere = new ArrayList<>();
 
-    public Firma(String telefonNummer, String navn) {
+    public Firma(String navn, String telefonNummer) {
         this.telefonNummer = telefonNummer;
         this.navn = navn;
     }
@@ -17,5 +17,6 @@ public class Firma {
             deltagere.add(deltager);
             deltager.setFirma(this);
         }
+
     }
 }

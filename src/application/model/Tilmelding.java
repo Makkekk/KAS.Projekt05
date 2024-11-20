@@ -38,4 +38,8 @@ public class Tilmelding {
             hotel.addTilmelding(this);
         }
     }
+
+    public Deltager getDeltager() {
+        return deltager;
+    }
 }

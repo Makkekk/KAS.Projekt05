@@ -18,7 +18,7 @@ public class Controller {
         return Storage.getDeltagere();
     }
 
-    public static Firma createFirma(String telefonNummer, String navn) {
+    public static Firma createFirma(String navn, String telefonNummer) {
         Firma firma = new Firma(telefonNummer, navn);
         Storage.addFirma(firma);
         return firma;
@@ -29,7 +29,7 @@ public class Controller {
     }
 
     public static Tilmelding createTilmelding(LocalDate ankomstDato, Deltager deltager, LocalDate afrejseDato, boolean foredragsholder, Konference konference) {
-        Tilmelding tilmelding = konference.createTilmelding(deltager,ankomstDato,afrejseDato,foredragsholder);
+        Tilmelding tilmelding = konference.createTilmelding(deltager, ankomstDato, afrejseDato, foredragsholder);
         Storage.addTilmelding(tilmelding);
         return tilmelding;
     }
@@ -67,17 +67,18 @@ public class Controller {
         return null;
     }
 
-    public static ArrayList<Ledsager>getLedsagere(){
+    public static ArrayList<Ledsager> getLedsagere() {
         return Storage.getLedsagere();
     }
 
-    public static Udflugt createUdflugt(String navn, String adresse, LocalDate dato, int pris){
-        Udflugt udflugt =new Udflugt(navn, adresse, dato, pris);
+    public static Udflugt createUdflugt(String navn, String adresse, LocalDate dato, int pris) {
+        Udflugt udflugt = new Udflugt(navn, adresse, dato, pris);
         Storage.addUdflugt(udflugt);
         return udflugt;
     }
 
-    public static ArrayList<Udflugt> getUdflugter (){
+    public static ArrayList<Udflugt> getUdflugter() {
         return Storage.getUdflugter();
     }
+
 }

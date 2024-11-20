@@ -39,9 +39,26 @@ public class Konference {
         }
     }
 
+
+
     public void addHotel(Hotel hotel) {
         if (!hoteller.contains(hotel)) {
             hoteller.add(hotel);
         }
+    }
+    public ArrayList<Deltager> getTilmeldingerSomDeltager() {
+        ArrayList<Deltager> deltagere = new ArrayList<>();
+        for (Tilmelding tilmelding : tilmeldinger) {
+            deltagere.add(tilmelding.getDeltager());
+        }
+        return deltagere;
+    }
+
+    @Override
+    public String toString() {
+        return "Konference{" +
+                "navn='" + navn + '\'' +
+                ", adresse='" + adresse + '\'' +
+                '}';
     }
 }
